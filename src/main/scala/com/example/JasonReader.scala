@@ -4,7 +4,6 @@ import org.apache.spark.sql.SparkSession
 import org.json4s.DefaultFormats
 import org.json4s.jackson.JsonMethods.parse
 
-import scala.util.Try
 
 object JsonReader extends App {
 
@@ -18,17 +17,18 @@ object JsonReader extends App {
   implicit val df = DefaultFormats
   val jsonfile = args(0)
   case class WineMagData(
-                          id: BigInt,
-                          country: String,
-                          points: BigInt,
-                          title: String,
-                          variety: String,
-                          winery: String
+                          id: Option[BigInt],
+                          country: Option[String],
+                          points: Option[BigInt],
+                          title: Option[String],
+                          variety: Option[String],
+                          winery: Option[String]
                         )
 
   val js = sc.textFile(jsonfile).cache()
-  js.collect().foreach { e =>
-    val s = Try(parse(e).extract[WineMagData]).toOption
+  js.foreach { e =>
+    val s = parse(e).extract[WineMagData]
     println(s)
   }
+
 }
