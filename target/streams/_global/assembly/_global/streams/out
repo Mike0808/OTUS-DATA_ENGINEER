@@ -5,7 +5,7 @@
 [0m[[0m[0mdebug[0m] [0m[0mMerging files...[0m
 [0m[[0m[0mdebug[0m] [0m[0mMerging 'META-INF/MANIFEST.MF' with strategy 'discard'[0m
 [0m[[0m[0minfo[0m] [0m[0mStrategy 'discard' was applied to a file (Run the task at debug level to see details)[0m
-[0m[[0m[0mdebug[0m] [0m[0mSHA-1: 6c25c05529d8f135ae33a89cdab18182b0effdcb[0m
+[0m[[0m[0mdebug[0m] [0m[0mSHA-1: de34181b19c13217445533b2c6d2eb6e1cd96927[0m
 [0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/mikhailkuznetsov/Downloads/Courses/Data_engineer/Project/json_reader_kuznetsov/target/scala-2.11/json_reader_Kuznetsov-assembly-0.0.1.jar ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	com/example/BostonCrimesMap$$anonfun$1.class[0m

@@ -20,6 +20,7 @@ object BostonCrimesMap extends App {
 
   val csvCrimeFacts= args(0)
   val csvOffenseCodes= args(1)
+  val parquetOutputFolder= args(2)
 
   val crimeFacts = spark
     .read
@@ -36,6 +37,11 @@ object BostonCrimesMap extends App {
  println("You choose: " + inputTypeDistrict.toUpperCase)
     crimeFacts.createOrReplaceTempView("crimeFacts")
     val crimes_total = spark.sql("select COUNT(DISTRICT) as total_crimes_count ,DISTRICT from crimeFacts Where DISTRICT = '" + inputTypeDistrict.toUpperCase + "' group by DISTRICT")
+      .repartition(1)
+      .write
+      .format("parquet")
+      .mode("append")
+      .save(parquetOutputFolder)
 
     val crimes_total_val = crimeFacts
       .select("DISTRICT")
@@ -55,9 +61,16 @@ object BostonCrimesMap extends App {
       "(select COUNT(DISTRICT) as crimes_count ,DISTRICT, MONTH, YEAR " +
       "FROM crimeFacts group by DISTRICT, YEAR,MONTH ORDER BY YEAR, MONTH) " +
       "WHERE DISTRICT='" + inputTypeDistrict.toUpperCase + "' group by DISTRICT, YEAR, MONTH")
-  percentile_approx.show()
 
-    val offenseCodes = spark
+  percentile_approx.show()
+  percentile_approx
+    .repartition(1)
+  .write
+  .format("parquet")
+    .mode("append")
+    .save(parquetOutputFolder)
+
+  val offenseCodes = spark
       .read
       .option("header", "true")
       .option("inferSchema", "true")
@@ -82,16 +95,35 @@ object BostonCrimesMap extends App {
     .select($"crime_type")
 
  val ls = frequent_crime_types.take(3).mkString(", ").foreach(e=>print(e))
+  frequent_crime_types
+    .repartition(1)
+    .write
+    .format("parquet")
+    .mode("append")
+    .save(parquetOutputFolder)
 
   val lat = spark.sql("SELECT AVG(Lat) as lat " +
     "FROM " +
     "crimeFacts WHERE DISTRICT='" + inputTypeDistrict.toUpperCase + "' group by DISTRICT")
 
   lat.show()
+   lat
+     .repartition(1)
+    .write
+    .format("parquet")
+    .mode("append")
+    .save(parquetOutputFolder)
+
   val lng = spark.sql("SELECT AVG(Long) as lng " +
     "FROM " +
     "crimeFacts WHERE DISTRICT='" + inputTypeDistrict.toUpperCase + "' group by DISTRICT")
 lng.show()
+  lng
+    .repartition(1)
+    .write
+    .format("parquet")
+    .mode("append")
+    .save(parquetOutputFolder)
 
 
 
