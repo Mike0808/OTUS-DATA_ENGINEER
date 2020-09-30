@@ -5,9 +5,17 @@
 [0m[[0m[0mdebug[0m] [0m[0mMerging files...[0m
 [0m[[0m[0mdebug[0m] [0m[0mMerging 'META-INF/MANIFEST.MF' with strategy 'discard'[0m
 [0m[[0m[0minfo[0m] [0m[0mStrategy 'discard' was applied to a file (Run the task at debug level to see details)[0m
-[0m[[0m[0mdebug[0m] [0m[0mSHA-1: 7b064d38a3d32670bf9d7aa0a698b2cbfcf74cb5[0m
+[0m[[0m[0mdebug[0m] [0m[0mSHA-1: 6c25c05529d8f135ae33a89cdab18182b0effdcb[0m
 [0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/mikhailkuznetsov/Downloads/Courses/Data_engineer/Project/json_reader_kuznetsov/target/scala-2.11/json_reader_Kuznetsov-assembly-0.0.1.jar ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/example/BostonCrimesMap$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mikhailkuznetsov/Downloads/Courses/Data_engineer/Project/json_reader_kuznetsov/target/streams/_global/assemblyOption/_global/streams/assembly/e673dfde7ec07aff0c86de02669a5dee464643b0_dir/com/example/BostonCrimesMap$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/example/BostonCrimesMap$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mikhailkuznetsov/Downloads/Courses/Data_engineer/Project/json_reader_kuznetsov/target/streams/_global/assemblyOption/_global/streams/assembly/e673dfde7ec07aff0c86de02669a5dee464643b0_dir/com/example/BostonCrimesMap$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/example/BostonCrimesMap$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mikhailkuznetsov/Downloads/Courses/Data_engineer/Project/json_reader_kuznetsov/target/streams/_global/assemblyOption/_global/streams/assembly/e673dfde7ec07aff0c86de02669a5dee464643b0_dir/com/example/BostonCrimesMap$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/example/BostonCrimesMap.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mikhailkuznetsov/Downloads/Courses/Data_engineer/Project/json_reader_kuznetsov/target/streams/_global/assemblyOption/_global/streams/assembly/e673dfde7ec07aff0c86de02669a5dee464643b0_dir/com/example/BostonCrimesMap.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	com/example/JsonReader$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/mikhailkuznetsov/Downloads/Courses/Data_engineer/Project/json_reader_kuznetsov/target/streams/_global/assemblyOption/_global/streams/assembly/e673dfde7ec07aff0c86de02669a5dee464643b0_dir/com/example/JsonReader$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	com/example/JsonReader$.class[0m
